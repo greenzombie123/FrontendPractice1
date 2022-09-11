@@ -1,0 +1,263 @@
+/* General Styles*/
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f3f3f3;
+}
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --yellow: #fbffa7;
+  --red: #ff764d;
+  --lightblue: #b1c5ff;
+  --purple: #d5b3ff;
+  --lightgreen: #b6ffc0;
+  --darkblue: #0000ff;
+}
+
+/*Body*/
+
+.main-container {
+  margin: 0 auto;
+  background-color: white;
+  max-width: 100rem;
+}
+
+/*        Header        */
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 20px 30px;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid black;
+  align-items: center;
+}
+
+/*Menu*/
+header ul {
+  display: flex;
+  /* align-items: center; */
+  gap: 23px;
+  margin-left: 20px;
+}
+
+/*Menu Elment*/
+header ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.more {
+  color: orange;
+}
+
+.free {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.free a {
+  text-decoration: none;
+  color: var(--darkblue);
+}
+
+.log {
+  margin-left: 20px;
+  font-weight: bold;
+}
+/*Main*/
+
+main {
+  background-color: white;
+}
+
+.upper-menu {
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+}
+
+.upper-menu__item {
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+}
+
+.upper-menu__item--orange {
+  color: orange;
+}
+
+.heroimage {
+  background: 50% 50% / cover url("../Assets/header.avif") no-repeat;
+  height: 80vh;
+  width: 80%;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.heroimage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: var(--red);
+  font-weight: bolder;
+}
+
+.bodytext {
+  width: 49rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.bodytext h4 {
+  font-weight: bolder;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  line-height: 2;
+}
+
+.bodytext p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.blue {
+  color: var(--darkblue);
+}
+
+.collage-one {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  width: 80%;
+  margin: 0 auto 6rem;
+}
+
+.collage-one__pic-one {
+  display: inline-block;
+  background: center / cover url("../Assets/photo-1.jpg") no-repeat;
+  height: 35vw;
+  width: 35vw;
+  z-index: 1;
+  vertical-align: middle;
+  position: relative;
+}
+.collage-one__pic-two {
+  display: inline-block;
+  background: no-repeat center / cover url("../Assets/photo-2.jpg");
+  height: 20vw;
+  width: 25vw;
+  margin-left: 4vw;
+  vertical-align: middle;
+  z-index: 1;
+  position: relative;
+}
+.collage-one__pic-three {
+  position: absolute;
+  background-color: var(--yellow);
+  height: 44vw;
+  width: 60vw;
+  top: 0;
+  left: 30vw;
+}
+
+@media (min-width: 1600px) {
+  .collage-one__pic-three {
+    width: 55.4rem;
+    left: 34.6rem;
+  }
+}
+
+.video {
+  width: 49rem;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.video__play-button {
+  position: relative;
+}
+
+.video__play-button::after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: no-repeat url(../Assets/download.svg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.video__img {
+  width: 100%;
+}
+
+.video__text {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.collage-two {
+  position: relative;
+  padding-top: 6.76vw;
+  padding-bottom: 6.76vw;
+  width: 80%;
+  margin: 0 auto 6rem;
+  height: 58vw;
+}
+
+.collage-two__background{
+  position: absolute;
+  height: 58vw;
+  width: 56vw;
+  background-color: var(--lightgreen);
+  top: 0;
+  left: -10vw;
+}
+
+.collage-two__leftside {
+  width: 50%;
+  height: 100%;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.collage-two__pic-one,
+.collage-two__pic-two {
+  height: 20vw;
+  width: 32vw;
+  z-index: 1;
+  position: relative;
+}
+
+.collage-two__pic-one {
+  background: center / cover url("../Assets/photo-3.jpg") no-repeat;
+}
+
+.collage-two__pic-two {
+  background: center / cover url("../Assets/photo-4.jpg") no-repeat;
+}
+
+.collage-two__pic-three {
+  display: inline-block;
+  background: center / cover url("../Assets/photo-5.jpg") no-repeat;
+  height: 40vw;
+  width: 39.68vw;
+  z-index: 1;
+  position: relative;
+  vertical-align: bottom;
+  margin-bottom: 2.5vw;
+}
